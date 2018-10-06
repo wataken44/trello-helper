@@ -6,3 +6,5 @@ services:
     container_name: trello-helper
     ports:
       - "50031:22"
+    volumes:
+      - ./trello-helper/config.json:/home/ubuntu/trello-helper/trello_helper/config.json

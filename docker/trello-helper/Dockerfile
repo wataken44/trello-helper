@@ -12,6 +12,7 @@ RUN set -xe \
 USER ubuntu
 
 RUN set -xe \
+    && cd /home/ubuntu/ \
     && git clone https://github.com/wataken44/trello-helper
 
 USER root
