@@ -1,0 +1,18 @@
+{
+  "secretes": {
+
+  },
+  "periodical": [
+    {
+      "period" : "month",
+      "at": 1,
+      "title": "(%month%月) ビジネス書を読む"
+    },
+    {
+      "period" : "week",
+      "at": 1,
+      "title": "(%month%/%day%) 週次タスク再確認"
+    }
+
+  ]
+}
