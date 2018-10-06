@@ -1,0 +1,8 @@
+version: '3.3'
+services:
+  trello-helper:
+    build:
+      context: trello-helper
+    container_name: trello-helper
+    ports:
+      - "50031:22"
