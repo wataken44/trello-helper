@@ -1,18 +1,30 @@
 {
-  "secretes": {
-
+  "secret": {
+    "api_key": "<trello api key>",
+    "api_secret": "<trello api secret>",
+    "token": "<trello token>"
   },
-  "periodical": [
-    {
-      "period" : "month",
-      "at": 1,
-      "title": "(%month%月) ビジネス書を読む"
-    },
+  "add-periodical-task": [
     {
       "period" : "week",
-      "at": 1,
-      "title": "(%month%/%day%) 週次タスク再確認"
+      "at": [1],
+      "title": "(%month%/%day%) 可燃ごみを捨てる",
+      "board": "work",
+      "list": "task"
+    },
+    {
+      "period" : "month",
+      "at": [1],
+      "title": "(%month%月) クレジットカードの支払いを確認する",
+      "board": "home",
+      "list": "task"
     }
-
+  ],
+  "fill-due": [
+    {
+      "board": "home",
+      "list": "task",
+      "period": 14
+    }
   ]
 }
