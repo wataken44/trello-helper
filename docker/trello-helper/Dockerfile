@@ -25,13 +25,10 @@ RUN set -xe \
     && chmod 755 run.sh
 
 RUN set -xe \
-    && cd /home/ubuntu/bin \
-    && echo '#!/bin/sh' > install-cron.sh \ 
-    && echo "echo 0 '*/4' '*' '*' '*' /home/ubuntu/bin/run.sh | sudo tee /var/spool/cron/crontabs/ubuntu" >> install-cron.sh \
-    && echo 'sudo chown ubuntu:crontab /var/spool/cron/crontabs/ubuntu' >> install-cron.sh \
-    && echo 'sudo service cron restart' >> install-cron.sh \
-    && chmod 755 install-cron.sh
-
+    && mkdir /home/ubuntu/tmp/ \
+    && cd /home/ubuntu/tmp/ \
+    && echo '20  */3  *  *  *  /home/ubuntu/bin/run.sh' > crontab.txt
+    
 USER root
 
 RUN set -xe \
