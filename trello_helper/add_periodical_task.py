@@ -37,7 +37,7 @@ def add_periodical_task(client, task, now, force):
         if (force == False) and (now.day not in at_arr):
             return
     elif period == "week":
-        if (force == False) and (now.isoweekday not in at_arr):
+        if (force == False) and (now.isoweekday() not in at_arr):
             return
         
     board = common.get_board_by_name(client, board_name)
