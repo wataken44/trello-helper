@@ -27,7 +27,7 @@ RUN set -xe \
 RUN set -xe \
     && mkdir /home/ubuntu/tmp/ \
     && cd /home/ubuntu/tmp/ \
-    && echo '20  */3  *  *  *  /home/ubuntu/bin/run.sh' > crontab.txt
+    && echo '5  0  *  *  *  /home/ubuntu/bin/run.sh' > crontab.txt
     
 USER root
 
