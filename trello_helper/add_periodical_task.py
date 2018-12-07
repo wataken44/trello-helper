@@ -52,7 +52,7 @@ def add_periodical_task(client, task, now, force):
     if period == "month":
         dy = now.year
         dm = now.month + 1
-        if now.month == 13:
+        if dm == 13:
             dy = dy + 1
             dm = 1
         
